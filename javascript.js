@@ -429,7 +429,7 @@ const SupportTicketModal = ({ isOpen, onClose, user }) => {
   const [isSent, setIsSent] = useState(false);
 
   // REPLACE WITH YOUR ACTUAL DISCORD WEBHOOK URL
-  const DISCORD_WEBHOOK_URL = "YOUR_DISCORD_WEBHOOK_URL_HERE";
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1449711276694437939/2qWzB5uwk1dbET8bsx-U153KIdloOJgKMHCxN91tyjLBmhEg-hScEw0oqOvrC7iGfuSG";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -449,7 +449,7 @@ const SupportTicketModal = ({ isOpen, onClose, user }) => {
     };
 
     try {
-      if (DISCORD_WEBHOOK_URL && DISCORD_WEBHOOK_URL !== "YOUR_DISCORD_WEBHOOK_URL_HERE") {
+      if (DISCORD_WEBHOOK_URL && DISCORD_WEBHOOK_URL !== "https://discord.com/api/webhooks/1449710662136889469/2LwSKLi78-_wvDhJqSfgyKTBIqDzZR5MEdQz0JsM6Z_5-lb-h_wK8d0jv_PiJ_z36G2I") {
           await fetch(DISCORD_WEBHOOK_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -1246,11 +1246,11 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, total, onOrderPlaced }) => 
   const [numberCopied, setNumberCopied] = useState(false);
 
   const PAYMENT_NUMBERS = {
-    bKash: "01700000000",
-    Nagad: "01800000000"
+    bKash: "01911163013",
+    Nagad: "01757382315"
   };
 
-  const DISCORD_WEBHOOK_URL = "YOUR_DISCORD_WEBHOOK_URL_HERE"; 
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1449710662136889469/2LwSKLi78-_wvDhJqSfgyKTBIqDzZR5MEdQz0JsM6Z_5-lb-h_wK8d0jv_PiJ_z36G2I"; 
 
   if (!isOpen) return null;
 
@@ -1262,7 +1262,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, total, onOrderPlaced }) => 
   };
 
   const sendToDiscord = async (order) => {
-    if (DISCORD_WEBHOOK_URL === "YOUR_DISCORD_WEBHOOK_URL_HERE") {
+    if (DISCORD_WEBHOOK_URL === "https://discord.com/api/webhooks/1449710662136889469/2LwSKLi78-_wvDhJqSfgyKTBIqDzZR5MEdQz0JsM6Z_5-lb-h_wK8d0jv_PiJ_z36G2I") {
         console.log("Discord Webhook URL not set. Logging order:", order);
         return;
     }
